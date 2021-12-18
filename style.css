@@ -1,7 +1,23 @@
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #282728;
+}
 main {
   margin: 0 auto;
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
-  background-color: #282728;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* this */
+  gap: 10px;
+}
+.container > div {
   color: aliceblue;
+  height: 100px;
+  flex: max(400px, 100%/3 - 20px); /* and this */
 }
