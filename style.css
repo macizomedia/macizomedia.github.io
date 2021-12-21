@@ -1,23 +1,85 @@
 body {
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  background-color: #272828;
+  color: azure;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 500;
-  background-color: #282728;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  
 }
+
 main {
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 0 2rem;
+}
+
+h3 {
+  line-height: 0%;
+}
+p {
+  line-height: 1.2;
+}
+
+h5 {
+  line-height: 0%;
+  font-size: 14px;
+  opacity: 0.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+  line-height: normal;
+}
+
+p::before { /* add the new bullet point */   
+    font-family: 'FontAwesome';
+    content: '\f101';
+    margin:0 5px 0 -15px;
+    color: rgba(185, 172, 172, 0.363);
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap; /* this */
-  gap: 10px;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 2rem;
 }
-.container > div {
-  color: aliceblue;
-  height: 100px;
-  flex: max(400px, 100%/3 - 20px); /* and this */
+.aside {
+
+  width: 35%;
+  margin: 0 2%;
+  padding: 2%;
+}
+.card-content {
+  background-color: #272828;
+  border-radius: 5px;
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #fff;
+  display: block;
+  margin: 1rem auto;
+  max-width: 960px;
+  padding: 1rem;
+}
+.content {
+  display: flex;
+}
+
+.experiance {
+
+ width: 50%;
+}
+
+.experiance-list {
+
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.education .skills {
+  min-width: 55%;
 }

@@ -1,16 +1,16 @@
 {
   "name": "Blas Oronoz",
   "title": "Front-end developer",
-  "Relevant Experience": [
+  "experience": [
     {
       "position": "Front-end developer",
       "company": "Vote-Rokie",
       "startDate": "2018-01-01",
       "endDate": "2018-12-31",
-      "Location": "Berlin",
+      "location": "Berlin",
       "tasks": [
-        "Write modern, performant, and robust code for web applications",
-        "Work with a variety of different languages, etc",
+        "Write modern, performant, and robust code-base with react, redux, and rxjs-observable",
+        "Work with types and interfaces to ensure code quality and consistency",
         "Communicate and collaborate with multi-disciplinary teams of engineers, designers, and other developers"
       ]
     },
@@ -19,7 +19,7 @@
       "company": "Freelancer",
       "startDate": "2018-01-01",
       "endDate": "2018-12-31",
-      "Location": "Europe",
+      "location": "Europe",
       "tasks": [
         "Helped solidify a brand direction for blistabloc to span across print, packaging, and web",
         "Engineered and maintained major features of Starry's customer-facing web app using React, Redux, and Node.js",
@@ -31,7 +31,7 @@
       "company": "Freelancer",
       "startDate": "2018-01-01",
       "endDate": "2018-12-31",
-      "Location": "Berlin",
+      "location": "Berlin",
       "tasks": [
         "Worked closely with designers and management team to develop, document, and manage a new product",
         "Engineered and maintained major features for a web app using React, Redux, and Node.js",
@@ -39,27 +39,25 @@
       ]
     }
   ],
-  "skills": {
-    "Programming Languages": ["JavaScript", "TypeScript", "Rust", "Golang"],
-    "Libraries, Frameworks & Bundlers": [
-      "React",
-      "vue",
-      "rxjs",
-      "ramda",
-      "webpack",
-      "parcel"
-    ],
-    "Utilies": ["Git", "GitHub", "Jira", "Confluence", "Slack", "Trello"],
-    "Platforms": ["Heroku", "GitHub", "AWS", "Azure", "google Cloud", "Docker"],
-    "Desing Tools": [
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-      "Adobe XD",
-      "Figma"
-    ],
-    "operating Systems": ["Windows", "Arch Linux", "MacOS"],
-    "Unix": ["Linux", "Bash", "Vim", "Tmux"]
-  },
+  "skills": [
+    { "kind": "Programming Languages", "stack": "TypeScript, Rust, Golang" },
+    {
+      "kind": "Libraries, Frameworks & Bundlers",
+      "stack": "React, vue, rxjs, ramda, webpack, parcel, etc"
+    },
+    { "kind": "Testing", "stack": "Jest, Cypress, Mocha" },
+    { "kind": "Version Control", "stack": "Git, Github, Bitbucket, Kraken" },
+    {
+      "kind": "Databases",
+      "stack": "MongoDB, MySQL, Redis, Algiola"
+    },
+    { "kind": "DevOps", "stack": "AWS, Docker, Kubernetes, Google Cloud" },
+    {
+      "kind": "Design",
+      "stack": "Photoshop, Illustrator, Figma, After Effects, Cinema 4D"
+    },
+    { "kind": "Other", "stack": "Jira, Trello, Slack, ClickUp" }
+  ],
   "education": [
     {
       "school": "University of Applied Sciences",
@@ -73,7 +71,7 @@
   ],
   "projects": [
     {
-      "name": "blistabloc",
+      "name": "snippy",
       "description": "A web app for managing your shopping list",
       "link": "https://blistabloc.com",
       "github": "",
@@ -82,7 +80,7 @@
       "Location": "Berlin"
     },
     {
-      "name": "Starry",
+      "name": "Block of Ether",
       "description": "A web app for managing your shopping list",
       "link": "https://starry.com",
       "github": "",
@@ -91,7 +89,7 @@
       "Location": "Berlin"
     },
     {
-      "name": "Vote-Rokie",
+      "name": "Zen and art of coding",
       "description": "A web app for managing your shopping list",
       "link": "https://vote-rokie.com",
       "github": "",
