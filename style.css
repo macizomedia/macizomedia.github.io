@@ -5,6 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  opacity: 0.9;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -27,6 +28,7 @@ h4,
 h5,
 h6 {
   font-family: "Anonymous Pro", monospace;
+  line-height: 1;
 }
 .name {
   font-family: "Noto Serif Display", serif;
@@ -55,17 +57,6 @@ h5 {
   opacity: 0.5;
   font-weight: 400;
 }
-
-/* li::before {
-
-  font-family: "FontAwesome";
-  content: "\f101";
-  margin: 0 5px 0 -15px;
-  color: rgba(185, 172, 172, 0.363);
-  list-style: none;
-  line-height: normal;
-} 
-*/
 p {
   margin: 0 0 1rem 0;
 }
@@ -94,6 +85,9 @@ p {
   width: 35%;
   margin: 0 2%;
   padding: 2%;
+  background-color: #272828;
+  color: azure;
+  font-family: "Inconsolata", monospace;
 }
 .card-content {
   background-color: #272828;
@@ -126,4 +120,6 @@ p {
 .education .skills {
   min-width: 55%;
   opacity: 0.5;
+  color: rgba(185, 172, 172, 0.363);
+  padding: 0 1rem;
 }
