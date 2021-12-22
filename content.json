@@ -2,7 +2,7 @@
   "name": "Blas Oronoz",
   "title": "Creative Director - Solution Architect",
   "location": "Leipzig, Germany",
-  "description": "Blas Oronoz is a creative director and solution architect with over 10 years of experience in the digital industry. He has worked with clients in the travel services industry, music video production, and technology. He has a passion for creating solutions that are intuitive, easy to use, and easy to understand. He has a background in both design and development, and is a strong believer in the power of design and development. He is an active member of interactive design foundation.",
+  "description": "Blas Oronoz is a creative director and solution architect with more than ten years of experience in the digital industry. As a digital nomad, he has worked with clients in many areas; from travel services to music production to gastronomy, sports and events. His passion is to create solutions that are intuitive, easy to use, and easy to understand, with a background in design and software development and a strong belief in the power of creativity. He is an active member of the Interactive Design Foundation.",
   "image": "images/blas-oronoz.jpg",
   "medium": "medium.com/@macizomedia",
   "github": "github.com/macizomedia",
@@ -43,10 +43,8 @@
       "endDate": "Present",
       "location": "Leipzig",
       "tasks": [
-        "Helped solidify a brand direction for blistabloc to span across print, packaging, and web", 
-        "Worked closely with designers and management team to develop, document, and manage a new product",
-        "Engineered and maintained major features for a web app using React, Redux, and Node.js",
-        "Proposed and implemented scalable solutions to issues identified with cloud services and databases"
+        "Helped solidify a brand direction for different clients profiles to span across print, packaging, and web", 
+        "Worked closely with designers and management team to develop, document, and manage a new product"
       ]
     }
   ],
