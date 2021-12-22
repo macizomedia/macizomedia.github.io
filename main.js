@@ -2,7 +2,7 @@ const root = document.querySelector("#root");
 
 const list = (arr) => {
   return arr.map((item) => {
-    return `<p>${item}</p>`;
+    return `<li class="list">${item}</li>`;
   });
 };
 
@@ -56,6 +56,54 @@ const listAlt = (object) => {
   });
 };
 
+const heading = (data) => {
+  const { name, title, location, description, image } = data;
+  {
+    /* <div class="frame">
+   <img src="${image}" alt="${name}">
+ </div> */
+  }
+  return `
+    <div class="header">
+    <h1 class="name">${name}</h1>
+    <p class="title">${title}</p>
+    <p class="location">${location}</p>
+    <p class="description">${description}</p>
+    </div>
+  `;
+};
+
+const contact = (data) => {
+  const { medium, email, phone, github, website, linkedin } = data;
+  return `<div class="contact">
+            <div class="link">
+            <span style="font-size: 14px; color: gray;">
+              <i class="fab fa-medium"></i>
+              <a href="#">${medium}</a>
+            </span>
+            </div>
+            <div class="link">
+            <span style="font-size: 14px; color: gray;">
+              <i class="fab fa-github"></i>
+              <a href="#">${github}</a>
+            </span>
+            </div>
+            <div class="link">
+            <span style="font-size: 14px; color: gray;">
+              <i class="fas fa-envelope"></i>
+              <a href="#">${email}</a>
+            </span>
+            </div>
+            <div class="link">
+            <span style="font-size: 14px; color: gray;">
+              <i class="fas fa-home"></i>
+              <a href="#">${website}</a>
+            </span>
+            </div>
+          </div>
+  `;
+};
+
 const experiance = (data) => {
   const { position, company, startDate, endDate, location, tasks } = data;
 
@@ -80,11 +128,7 @@ const education = (data) => {
       <h2>${school}</h2>
       <h3>${degree}</h3>
       <p>${Location}</p>
-      <p>${major}</p>
       <p>${startDate} - ${endDate}</p>
-    </div>
-    <div class="card-footer">
-      <a href="#" target="_blank">See more</a>
     </div>
   `;
 };
@@ -94,10 +138,9 @@ const main = async () => {
   const data = await json.json();
   return `
     <div class="container">
-      <div class="header">
-        <h1>${data.name}</h1>
-        <h2>${data.title}</h2>
-      </div>
+      ${heading(data)}
+      ${contact(data)}
+      
       <div class="content">
         <div class="experience">
           <h1>Experience</h1>

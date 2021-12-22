@@ -1,13 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@0;1&family=Fira+Mono:wght@400;500;700&family=Inconsolata:wght@200;400;600&family=Noto+Serif+Display&display=swap");
 body {
   background-color: #272828;
   color: azure;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  
 }
 
 main {
@@ -16,40 +16,81 @@ main {
   padding: 0 2rem;
 }
 
-h3 {
-  line-height: 0%;
-}
 p {
   line-height: 1.2;
+  font-family: "Inconsolata", monospace;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anonymous Pro", monospace;
+}
+.name {
+  font-family: "Noto Serif Display", serif;
+  font-size: 64px;
+  line-break: unset;
+  line-height: 0.2;
+}
+.title {
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: "Anonymous Pro", monospace;
+}
+.location {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.description {
+  font-size: 16px;
+  line-height: 1.2;
+  text-align: justify;
+  font-weight: 400;
+}
 h5 {
   line-height: 0%;
   font-size: 14px;
   opacity: 0.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
 }
 
-li {
+/* li::before {
+
+  font-family: "FontAwesome";
+  content: "\f101";
+  margin: 0 5px 0 -15px;
+  color: rgba(185, 172, 172, 0.363);
   list-style: none;
   line-height: normal;
+} 
+*/
+p {
+  margin: 0 0 1rem 0;
 }
-
-p::before { /* add the new bullet point */   
-    font-family: 'FontAwesome';
-    content: '\f101';
-    margin:0 5px 0 -15px;
-    color: rgba(185, 172, 172, 0.363);
+.header {
+  margin: 4rem 0 2rem 0;
+  padding: 0;
 }
-
+.contact {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+.link {
+  margin: 20px;
+}
+.link a {
+  text-decoration: none;
+  color: gray;
+}
 .container {
   margin: 0 auto;
   max-width: 960px;
   padding: 0 2rem;
 }
 .aside {
-
   width: 35%;
   margin: 0 2%;
   padding: 2%;
@@ -59,9 +100,9 @@ p::before { /* add the new bullet point */
   border-radius: 5px;
   line-height: 1.5;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #fff;
+  color: rgba(206, 203, 203, 0.925);
   display: block;
-  margin: 1rem auto;
+  margin: 2% auto;
   max-width: 960px;
   padding: 1rem;
 }
@@ -70,16 +111,19 @@ p::before { /* add the new bullet point */
 }
 
 .experiance {
-
- width: 50%;
+  width: 50%;
 }
 
 .experiance-list {
-
   list-style: none;
   padding: 0 1rem;
 }
 
+.experiance-list p {
+  font-size: 18px;
+}
+
 .education .skills {
   min-width: 55%;
+  opacity: 0.5;
 }

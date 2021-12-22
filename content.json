@@ -1,38 +1,49 @@
 {
   "name": "Blas Oronoz",
-  "title": "Front-end developer",
+  "title": "Creative Director - Solution Architect",
+  "location": "Leipzig, Germany",
+  "description": "Blas Oronoz is a creative director and solution architect with over 10 years of experience in the digital industry. He has worked with clients in the travel services industry, music video production, and technology. He has a passion for creating solutions that are intuitive, easy to use, and easy to understand. He has a background in both design and development, and is a strong believer in the power of design and development. He is an active member of interactive design foundation.",
+  "image": "images/blas-oronoz.jpg",
+  "medium": "medium.com/@macizomedia",
+  "github": "githug.com/macizomedia",
+  "linkedin": "blasoronoz",
+  "website": "http://devcreative.me",
+  "email": "macizomedia@gmail.com",
   "experience": [
     {
       "position": "Front-end developer",
       "company": "Vote-Rokie",
-      "startDate": "2018-01-01",
-      "endDate": "2018-12-31",
+      "startDate": "2021-06",
+      "endDate": "Present",
       "location": "Berlin",
       "tasks": [
-        "Write modern, performant, and robust code-base with react, redux, and rxjs-observable",
-        "Work with types and interfaces to ensure code quality and consistency",
+        "Write modern, performant, and robust code-base with react, redux, and rxjs-observable.",
+        "Design and implement a responsive design system with a focus on performance and accessibility.",
+        "Responsible to manage jira tickets and provide support to the team.",
         "Communicate and collaborate with multi-disciplinary teams of engineers, designers, and other developers"
       ]
     },
     {
-      "position": "Engineer",
+      "position": "Software Engineer",
       "company": "Freelancer",
       "startDate": "2018-01-01",
       "endDate": "2018-12-31",
       "location": "Europe",
       "tasks": [
-        "Helped solidify a brand direction for blistabloc to span across print, packaging, and web",
-        "Engineered and maintained major features of Starry's customer-facing web app using React, Redux, and Node.js",
+        "Engineered and maintained major features of several customer-facing web app using React, Redux, and Node.js",
+        "Work with types and interfaces to ensure code quality and consistency.",
+        "Contribute with database design and development.",
         "Proposed and implemented scalable solutions to issues identified with cloud services and databases"
       ]
     },
     {
       "position": "Creative Technologist",
       "company": "Freelancer",
-      "startDate": "2018-01-01",
-      "endDate": "2018-12-31",
-      "location": "Berlin",
+      "startDate": "2018-07",
+      "endDate": "Present",
+      "location": "Leipzig",
       "tasks": [
+        "Helped solidify a brand direction for blistabloc to span across print, packaging, and web", 
         "Worked closely with designers and management team to develop, document, and manage a new product",
         "Engineered and maintained major features for a web app using React, Redux, and Node.js",
         "Proposed and implemented scalable solutions to issues identified with cloud services and databases"
@@ -60,13 +71,11 @@
   ],
   "education": [
     {
-      "school": "University of Applied Sciences",
-      "degree": "Bachelor of Science",
-      "major": "Computer Science",
-      "minor": "",
-      "startDate": "2018-01-01",
-      "endDate": "2018-12-31",
-      "Location": "Berlin"
+      "school": "Digital Career Institute",
+      "degree": "Fullstack Web Developer",
+      "startDate": "2020-10-01",
+      "endDate": "2021-11-30",
+      "Location": "Leipzig, Germany"
     }
   ],
   "projects": [
