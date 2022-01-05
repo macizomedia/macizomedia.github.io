@@ -1,5 +1,15 @@
 const root = document.querySelector("#root");
 
+const toolbar = () => {
+  return `
+  <div class="toolbar">
+    <i class="fas fa-language"></i>
+    <p id="en">🇬🇧</p>
+    <p id="de">🇩🇪</p>
+  </div>
+  `
+}
+
 const list = (arr) => {
   return arr.map((item) => {
     return `<li class="list">${item}</li>`;
@@ -69,7 +79,6 @@ const heading = (data) => {
     <p class="title">${title}</p>
     <p class="location">${location}</p>
     <p class="description">${description}</p>
-    </div>
   `;
 };
 
@@ -133,11 +142,21 @@ const education = (data) => {
   `;
 };
 
-const main = async () => {
-  const json = await fetch("./content.json");
-  const data = await json.json();
+let language = ""
+let data = null
+
+const main = async (lang) => {
+  const data_en = await fetch("./en_content.json");
+  const data_de = await fetch("./de_content.json");
+  const english = await data_en.json();
+  const german = await data_de.json();
+
+  lang === 'en' ? data = english : data = german
+
   return `
     <div class="container">
+  
+      ${toolbar()} 
       ${heading(data)}
       ${contact(data)}
       
@@ -162,6 +181,14 @@ const main = async () => {
 };
 
 window.addEventListener("load", async () => {
-  const html = await main();
-  root.innerHTML = html;
+  root.innerHTML = await main('en');
+  let de_btn = document.getElementById('de')
+  de_btn.addEventListener('click', async () => {
+    root.innerHTML = await main('po');
+  })
+  let en_btn = document.getElementById('en')
+  en_btn.addEventListener('click', async () => {
+    console.log('clickes')
+    root.innerHTML = await main('en');
+  })
 });

@@ -1,0 +1,128 @@
+{
+    "name": "Blas Oronoz",
+    "title": "Solution Architect",
+    "location": "Leipzig, Germany",
+    "description": "Blas Oronoz ist Creative Director und Solution Architect mit mehr als zehn Jahren Erfahrung in der Digitalbranche. Als digitaler Nomade hat er mit Kunden in den unterschiedlichsten Bereichen zusammengearbeitet, von Reisedienstleistungen über Musikproduktion, Gastgewerbe, Sport und Events.Seine Leidenschaft ist es, intuitive, benutzerfreundliche und leicht verständliche Lösungen zu entwickeln, mit einem Hintergrund in Softwaredesign und -entwicklung sowie einem starken Glauben an die Kraft der Kreativität. Er ist aktives Mitglied der Interactive Design Foundation, produktiv in der Entwicklung und Umsetzung von Lösungen für die digitale Welt durch die Methodik des Design Thinking.",
+    "image": "images/blas-oronoz.jpg",
+    "medium": "medium.com/@macizomedia",
+    "github": "github.com/macizomedia",
+    "linkedin": "blasoronoz",
+    "website": "http://devcreative.me",
+    "email": "macizomedia@gmail.com",
+    "experience": [
+      {
+        "position": "Front-end developer",
+        "company": "Vote-Rookie",
+        "startDate": "2021-06",
+        "endDate": "aktuelle",
+        "location": "Berlin",
+        "tasks": [
+          "Schreiben einer modernen, effizienten und robusten Codebasis mit React, Redux und rxjs-observable.",
+          "Entwerfen und Implementieren eines responsiven Designsystems mit Fokus auf Leistung und Zugänglichkeit.",
+          "Verantwortlicher für die Verwaltung von Jira-Tickets und Unterstützung des Teams.",
+          "Kommunikation und Zusammenarbeit mit multidisziplinären Teams aus Ingenieuren, Designern und anderen Entwicklern."
+        ]
+      },
+      {
+        "position": "Software Engineer",
+        "company": "Freelancer",
+        "startDate": "2018-04",
+        "endDate": "2019-12",
+        "location": "Europe",
+        "tasks": [
+          "Entwicklung und Wartung der Hauptfunktionen verschiedener kundenorientierter Webanwendungen mit React, Redux und Node.js.",
+          "Arbeit mit Typen und Schnittstellen zur Sicherstellung von Codequalität und -konsistenz.",
+          "Beteiligung an der Konzeption und Entwicklung von Datenbanken.",
+          "Anbieten und Implementieren skalierbarer Lösungen für Probleme, die im Zusammenhang mit Datenbanken und Cloud-Diensten identifiziert wurden."
+        ]
+      },
+      {
+        "position": "Creative Technologist",
+        "company": "Freelancer",
+        "startDate": "2015-07",
+        "endDate": "2018-03",
+        "location": "Leipzig",
+        "tasks": [
+          "Mitentwicklung und Betreuung einer Markenausrichtung für verschiedene Kundenprofile, die Druck, Verpackung und das Web umfasst.", 
+          "Enge Zusammenarbeit mit den Designern und dem Managementteam, um neue Produkte zu entwickeln, zu dokumentieren und zu verwalten."
+        ]
+      }
+    ],
+    "skills": [
+      { "kind": "Programming Languages", "stack": "TypeScript, Rust, Golang" },
+      {
+        "kind": "Libraries, Frameworks & Bundlers",
+        "stack": "React, vue, rxjs, ramda, webpack, parcel, etc"
+      },
+      { "kind": "Testing", "stack": "Jest, Cypress, Mocha" },
+      { "kind": "Version Control", "stack": "Git, Github, Bitbucket, Kraken" },
+      {
+        "kind": "Databases",
+        "stack": "MongoDB, MySQL, Redis, Algiola"
+      },
+      { "kind": "DevOps", "stack": "AWS, Docker, Kubernetes, Google Cloud" },
+      {
+        "kind": "Design",
+        "stack": "Photoshop, Illustrator, Figma, After Effects, Cinema 4D"
+      },
+      { "kind": "Other", "stack": "Jira, Trello, Slack, ClickUp" }
+    ],
+    "education": [
+      {
+        "school": "Digital Career Institute",
+        "degree": "Fullstack Web Developer",
+        "startDate": "2020-10-01",
+        "endDate": "2021-11-30",
+        "Location": "Leipzig, Germany"
+      }
+    ],
+    "certificate": [
+      {
+        "school": "Digital Career Institute",
+        "degree": "Fullstack Web Developer",
+        "startDate": "2020-10-01",
+        "endDate": "2021-11-30",
+        "Location": "Leipzig, Germany"
+      }
+    ],
+    "projects": [
+      {
+        "name": "snippy",
+        "description": "web app to search, collect and organized code snippets",
+        "link": "https://blistabloc.com",
+        "github": "",
+        "startDate": "2018-01-01",
+        "endDate": "2018-12-31",
+        "Location": "Berlin"
+      },
+      {
+        "name": "Block of Ether",
+        "description": "A web app for managing your shopping list",
+        "link": "https://starry.com",
+        "github": "",
+        "startDate": "2018-01-01",
+        "endDate": "2018-12-31",
+        "Location": "Berlin"
+      },
+      {
+        "name": "Zen and art of coding",
+        "description": "A web app for managing your shopping list",
+        "link": "https://vote-rokie.com",
+        "github": "",
+        "startDate": "2018-01-01",
+        "endDate": "2018-12-31",
+        "Location": "Berlin"
+      }
+    ],
+    "interest": [
+      "music",
+      "art",
+      "sports",
+      "travel",
+      "cooking",
+      "reading",
+      "writing",
+      "photography"
+    ]
+  }
+  

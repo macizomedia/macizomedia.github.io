@@ -17,6 +17,10 @@ main {
   padding: 0 2rem;
 }
 
+i {
+  margin: 0 5px;
+  font-size: 12px;
+}
 p {
   line-height: 1.2;
   font-family: "Inconsolata", monospace;
@@ -29,6 +33,25 @@ h5,
 h6 {
   font-family: "Anonymous Pro", monospace;
   line-height: 1;
+}
+
+#en, #de {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  color: rgb(99, 95, 95);
+  font-weight: bolder;
+  font-size: 12px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.toolbar {
+  font-size: small;
+  padding: 1rem;
+  color:rgba(185, 172, 172, 0.363);
+  display: flex;
+  justify-items: center;
+  justify-content: end;
 }
 .name {
   font-family: "Noto Serif Display", serif;

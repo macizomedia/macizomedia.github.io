@@ -17,8 +17,8 @@
       "endDate": "Present",
       "location": "Berlin",
       "tasks": [
-        "Write modern, performant, and robust code-base with react, redux, and rxjs-observable.",
-        "Design and implement a responsive design system with a focus on performance and accessibility.",
+        "Write modern, performant, and robust code-base in Typescript.",
+        "Implement Redux and Redux Observables across app state and UI.",
         "Responsible to manage jira tickets and provide support to the team.",
         "Communicate and collaborate with multi-disciplinary teams of engineers, designers, and other developers."
       ]
@@ -26,11 +26,12 @@
     {
       "position": "Software Engineer",
       "company": "Freelancer",
-      "startDate": "2018-01-01",
-      "endDate": "2018-12-31",
+      "startDate": "2018-04",
+      "endDate": "2019-12",
       "location": "Europe",
       "tasks": [
         "Engineered and maintained major features of several customer-facing web app using React, Redux, and Node.js",
+        "Design and implement responsive design systems with focus on performance and accessibility.",
         "Work with types and interfaces to ensure code quality and consistency.",
         "Contribute with database design and development.",
         "Proposed and implemented scalable solutions to issues identified with cloud services and databases"
@@ -39,11 +40,12 @@
     {
       "position": "Creative Technologist",
       "company": "Freelancer",
-      "startDate": "2018-07",
-      "endDate": "Present",
+      "startDate": "2015-07",
+      "endDate": "2018-03",
       "location": "Leipzig",
       "tasks": [
         "Helped solidify a brand direction for different clients profiles to span across print, packaging, and web.", 
+        "Designed and developed a new logo and stacionary for large array of companies.",
         "Worked closely with designers and management team to develop, document, and deploy new products."
       ]
     }
@@ -68,6 +70,15 @@
     { "kind": "Other", "stack": "Jira, Trello, Slack, ClickUp" }
   ],
   "education": [
+    {
+      "school": "Digital Career Institute",
+      "degree": "Fullstack Web Developer",
+      "startDate": "2020-10-01",
+      "endDate": "2021-11-30",
+      "Location": "Leipzig, Germany"
+    }
+  ],
+  "certificate": [
     {
       "school": "Digital Career Institute",
       "degree": "Fullstack Web Developer",
