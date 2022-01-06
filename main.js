@@ -184,11 +184,10 @@ window.addEventListener("load", async () => {
   root.innerHTML = await main('en');
   let de_btn = document.getElementById('de')
   de_btn.addEventListener('click', async () => {
-    root.innerHTML = await main('po');
-  })
-  let en_btn = document.getElementById('en')
-  en_btn.addEventListener('click', async () => {
-    console.log('clickes')
-    root.innerHTML = await main('en');
+    root.innerHTML = await main('de');
+    let en_btn = document.getElementById('en')
+    en_btn.addEventListener('click', async () => {
+      window.location.reload();
+    })
   })
 });
