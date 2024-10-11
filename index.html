@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Abquanta</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>DevCreative</title>
-</head>
+  <body>
+    <style>
+      body,
+      html {
+        background-color: #272828;
+        color: azure;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.9;
+        line-height: 1.5;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
 
-<body>
+      .container {
+        text-align: center; /* Center the text */
+        padding: 20px; /* Add padding for better mobile spacing */
+        max-width: 80%; /* Limit width on larger screens */
+      }
+
+      h1 {
+        font-size: 2.5rem; /* Responsive font size */
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.2rem; /* Responsive font size */
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem; /* Adjust font size for smaller screens */
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 1.5rem; /* Further adjust for very small screens */
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
     <main>
-        <div id="root"></div>
+      <div id="root"></div>
     </main>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

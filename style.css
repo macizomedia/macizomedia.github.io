@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital@0;1&family=Fira+Mono:wght@400;500;700&family=Inconsolata:wght@200;400;600&family=Noto+Serif+Display&display=swap");
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
 body {
   background-color: #272828;
   color: azure;
@@ -32,7 +36,7 @@ h4,
 h5,
 h6 {
   font-family: "Anonymous Pro", monospace;
-  line-height: 1;
+  line-height: 0;
 }
 
 #en, #de {
@@ -57,7 +61,7 @@ h6 {
   font-family: "Noto Serif Display", serif;
   font-size: 64px;
   line-break: unset;
-  line-height: 0.2;
+  line-height: 0.8;
 }
 .title {
   font-size: 32px;
@@ -142,7 +146,7 @@ p {
 .education .skills {
   min-width: 55%;
   opacity: 0.5;
-  margin: 2rem 0;
+  margin: 2% auto;
   color: rgba(185, 172, 172, 0.363);
   padding: 0 1rem;
 }

@@ -1,0 +1,19 @@
+{
+  "name": "macizomedia.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macizomedia/macizomedia.github.io.git"
+  },
+  "author": "Blas Oronoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/macizomedia/macizomedia.github.io/issues"
+  },
+  "homepage": "https://github.com/macizomedia/macizomedia.github.io#readme"
+}
