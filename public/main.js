@@ -1,5 +1,6 @@
-var root = document.getElementById("root");
-window.addEventListener("load", function () {
-    console.log("Hello World");
-    root.innerHTML = "The Abquanta Initiative";
+"use strict";
+const root = document.getElementById("root");
+window.addEventListener("load", () => {
+    console.log("Getting Abquanted ...");
+    root.innerHTML = `The Abquanta Initiative`;
 });

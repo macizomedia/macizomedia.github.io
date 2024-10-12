@@ -5,7 +5,11 @@
    "type": "module",
   "main": "main.js",
   "scripts": {
-    "test": "jest"
+    "build":  "tsc",
+    "test": "jest",
+    "lint": "eslint src",
+    "start": "node main.js",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
