@@ -5,7 +5,7 @@ function main() {
     const subtitle = document.createElement("h3");
 
     title.textContent = "The Abquanta Initiative";
-    subtitle.text.Content = "The collapse of the wave function";
+    subtitle.textContent = "The collapse of the wave function";
     root.appendChild(title);
     root.appendChild(subtitle);
 }
