@@ -2,75 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Abquanta</title>
-  </head>
 
-  <body>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./images/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Abquanta</title>
     <style>
       body,
       html {
-        background-color: #272828;
-        color: azure;
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        opacity: 0.9;
-        line-height: 1.5;
-        padding: 0;
         margin: 0;
         height: 100%;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
+        perspective: 800px;
+        background-color: black;
       }
-
-      .container {
-        text-align: center; /* Center the text */
-        padding: 20px; /* Add padding for better mobile spacing */
-        max-width: 80%; /* Limit width on larger screens */
-      }
-
-      h1 {
-        font-size: 2.5rem; /* Responsive font size */
-        margin: 0;
-      }
-
-      p {
-        font-size: 1.2rem; /* Responsive font size */
-        line-height: 1.5;
-        margin-top: 10px;
-      }
-
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 2rem; /* Adjust font size for smaller screens */
-        }
-        p {
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        h1 {
-          font-size: 1.5rem; /* Further adjust for very small screens */
-        }
-        p {
-          font-size: 0.9rem;
-        }
+      .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgb(252, 244, 244);
+        position: absolute;
+        transform-style: preserve-3d;
       }
     </style>
-    <main>
-      <div id="root"></div>
-    </main>
+  </head>
+  <body>
+    <div class="dot" id="dot"></div>
+    <script src="https://cdn.jsdelivr.net/npm/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
