@@ -12,7 +12,7 @@ body {
   opacity: 0.9;
   line-height: 1.5;
   margin: 0;
-  padding: 0;
+  padding: 10px, 0px, 2px, 2px;
 }
 
 main {
@@ -36,7 +36,6 @@ h4,
 h5,
 h6 {
   font-family: "Anonymous Pro", monospace;
-  line-height: 0;
 }
 
 #en, #de {
@@ -106,7 +105,7 @@ p {
 .container {
   margin: 0 auto;
   max-width: 960px;
-  padding: 0 2rem;
+  padding: 10rem 2rem;
 }
 .aside {
   width: 35%;
