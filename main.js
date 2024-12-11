@@ -1,6 +1,7 @@
 const root = document.querySelector("#root");
 
 function main() {
+    console.log("Test")
     const title = document.createElement("h1");
     const subtitle = document.createElement("h3");
 
