@@ -8,7 +8,7 @@ const nextConfig = {
     return config;
   },
   env: {
-    CLIENT_ID: process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID,
+    CLIENT_ID: secret.CLIENT_ID,
   },
 };
 
