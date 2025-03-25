@@ -41,16 +41,19 @@ function Header() {
 
       <h1 className="text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-6 text-zinc-100">
         Abquanta
-        <span className="text-zinc-300 inline-block mx-1"> + </span>
-        <span className="inline-block -skew-x-6 text-blue-500"> Next.js </span>
+        <span className="text-zinc-300 inline-block mx-1"> The </span>
+        <span className="inline-block -skew-x-6 text-blue-500">
+          {" "}
+          Web3 Solutions{" "}
+        </span>
       </h1>
 
       <p className="text-zinc-300 text-base">
         Make your account{" "}
         <code className="bg-zinc-800 text-zinc-300 px-2 rounded py-1 text-sm mx-1">
-          Abquanta create account
+          abquanta.eth
         </code>{" "}
-        To get started with abquanta
+        to get started with Abquanta
       </p>
     </header>
   );
