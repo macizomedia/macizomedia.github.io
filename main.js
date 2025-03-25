@@ -1,6 +1,37 @@
 const root = document.querySelector("#root");
 
+document.addEventListener("DOMContentLoaded", () => {
+const fetchDataButton = document.getElementById('fetch-data-btn');
+const dataContainer = document.getElementById('data-container');
+
+// Initialize Web Worker
+const worker = new Worker('webworker.js');
+
+fetchDataButton.addEventListener('click', () => {
+    fetchDataButton.disabled = true;
+    dataContainer.textContent = "Loading data...";
+    
+    // Fetching data
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => response.json())
+        .then(data => {
+            worker.postMessage(data);
+        })
+        .catch(error => {
+            dataContainer.textContent = `Error: ${error.message}`;
+        });
+});
+
+// Web Worker message handler
+worker.onmessage = (event) => {
+    const { title, body } = event.data;
+    dataContainer.innerHTML = `<h2>${title}</h2><p>${body}</p>`;
+    fetchDataButton.disabled = false;
+};
+});
+
 function main() {
+
     console.log("Test")
     const title = document.createElement("h1");
     const subtitle = document.createElement("h3");

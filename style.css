@@ -5,7 +5,7 @@
 }
 body {
   background-color: #272828;
-  color: azure;
+  color: rgb(215, 230, 230);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -14,6 +14,37 @@ body {
   margin: 0;
   padding: 10px, 0px, 2px, 2px;
 }
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background-color: #323638;
+    color: #fff;
+}
+
+button {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005A9E;
+}
+
+#data-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
 
 main {
   margin: 0 auto;
@@ -86,10 +117,7 @@ h5 {
 p {
   margin: 0 0 1rem 0;
 }
-.header {
-  margin: 4rem 0 2rem 0;
-  padding: 0;
-}
+
 .contact {
   font-size: 14px;
   display: flex;
