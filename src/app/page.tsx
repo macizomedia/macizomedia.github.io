@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ConnectButton } from "thirdweb/react";
-import thirdwebIcon from "@public/thirdweb.svg";
+import thirdwebIcon from "@public/icon.svg";
 import { client } from "./client";
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
           <ConnectButton
             client={client}
             appMetadata={{
-              name: "Example App",
-              url: "https://example.com",
+              name: "Abquanta",
+              url: "https://abquanta.com",
             }}
           />
         </div>
@@ -40,17 +40,17 @@ function Header() {
       />
 
       <h1 className="text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-6 text-zinc-100">
-        thirdweb SDK
+        Abquanta
         <span className="text-zinc-300 inline-block mx-1"> + </span>
         <span className="inline-block -skew-x-6 text-blue-500"> Next.js </span>
       </h1>
 
       <p className="text-zinc-300 text-base">
-        Read the{" "}
+        Make your account{" "}
         <code className="bg-zinc-800 text-zinc-300 px-2 rounded py-1 text-sm mx-1">
-          README.md
+          Abquanta create account
         </code>{" "}
-        file to get started.
+        To get started with abquanta
       </p>
     </header>
   );
@@ -60,21 +60,20 @@ function ThirdwebResources() {
   return (
     <div className="grid gap-4 lg:grid-cols-3 justify-center">
       <ArticleCard
-        title="thirdweb SDK Docs"
-        href="https://portal.thirdweb.com/typescript/v5"
-        description="thirdweb TypeScript SDK documentation"
+        title="Profile"
+        href="https://abquanta.com/profile"
+        description="Create your profile and manage your account settings."
+      />
+      <ArticleCard
+        title="Services"
+        href="https://abquanta.com/services"
+        description="Explore the services available on the Abquanta platform."
       />
 
       <ArticleCard
-        title="Components and Hooks"
-        href="https://portal.thirdweb.com/typescript/v5/react"
-        description="Learn about the thirdweb React components and hooks in thirdweb SDK"
-      />
-
-      <ArticleCard
-        title="thirdweb Dashboard"
-        href="https://thirdweb.com/dashboard"
-        description="Deploy, configure, and manage your smart contracts from the dashboard."
+        title="Contact"
+        href="https://abquanta.com/contact"
+        description="Get in touch with us for any inquiries or support."
       />
     </div>
   );
