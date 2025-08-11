@@ -82,7 +82,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-          clean: false
 
   # Deployment job
   deploy:
