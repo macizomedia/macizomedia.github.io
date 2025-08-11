@@ -73,7 +73,7 @@ export function ContactSection() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Thank You!</h3>
                   <p className="text-muted-foreground">
-                    Your message has been received. We'll get back to you shortly.
+                    Your message has been received. We&apos;ll get back to you shortly.
                   </p>
                 </div>
               ) : (

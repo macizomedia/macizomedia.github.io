@@ -77,7 +77,7 @@ export function TestimonialsSection() {
                           />
                         ))}
                       </div>
-                      <blockquote className="text-lg italic">"{testimonial.quote}"</blockquote>
+                      <blockquote className="text-lg italic">&ldquo;{testimonial.quote}&rdquo;</blockquote>
                     </CardContent>
                     <CardFooter>
                       <div className="flex items-center gap-4">
