@@ -1,0 +1,1 @@
+- Always commit and push after a succeful build
