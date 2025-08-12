@@ -51,7 +51,7 @@ export function HeroSection() {
       <div className="container relative">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h1
-            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
+            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-hero-accent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            BlockSpark Labs specializes in building cutting-edge decentralized applications, secure smart contracts, and
+            Abquanta specializes in building cutting-edge decentralized applications, secure smart contracts, and
             seamless Web3 integrations that transform businesses and empower innovation in the blockchain ecosystem.
           </motion.p>
           <motion.div

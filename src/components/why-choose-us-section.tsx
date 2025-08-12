@@ -53,7 +53,7 @@ export function WhyChooseUsSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Why Choose Us</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Partner with BlockSpark Labs for unparalleled expertise and innovation in blockchain development
+            Partner with Abquanta for unparalleled expertise and innovation in blockchain development
           </p>
         </div>
 

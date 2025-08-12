@@ -19,6 +19,18 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // Brand colors
+        "smoky-black": "hsl(var(--smoky-black))",
+        "eerie-light": "hsl(var(--eerie-light))",
+        "eerie-black": "hsl(var(--eerie-black))",
+        "hot-orange": "hsl(var(--hot-orange))",
+        "moss": "hsl(var(--moss))",
+        "orange-wheel": "hsl(var(--orange-wheel))",
+        "night": "hsl(var(--night))",
+        "white": "hsl(var(--white))",
+        "hero-accent": "hsl(var(--hero-accent))",
+        
+        // shadcn/ui colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

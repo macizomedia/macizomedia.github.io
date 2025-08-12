@@ -1,37 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 252 87% 67%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 292 91% 73%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 240 4.9% 83.9%;
+  /* Custom Brand Colors - Fixed values */
+  --smoky-black: 30 15% 6%;        /* #100C0B */
+  --eerie-light: 41 9% 15%;        /* #282723 */
+  --eerie-black: 40 10% 10%;       /* #1C1B17 */
+  --hot-orange: 14 94% 46%;        /* #EB4604 */
+  --moss: 71 19% 56%;              /* #99A57D */
+  --orange-wheel: 32 92% 51%;      /* #F77E0D */
+  --night: 41 11% 9%;              /* #171614 */
+  --white: 0 0% 100%;              /* #FFFFFF */
+
+  /* Hero-specific color (moss only for hero) */
+  --hero-accent: 71 19% 56%;       /* moss */
+
+  /* Light mode (default) */
+  --background: 0 0% 100%;         /* white */
+  --foreground: 40 10% 10%;        /* eerie-black */
+  --card: 0 0% 98%;                /* light gray */
+  --card-foreground: 40 10% 10%;   /* eerie-black */
+  --popover: 0 0% 100%;            /* white */
+  --popover-foreground: 40 10% 10%; /* eerie-black */
+  --primary: 14 94% 46%;           /* hot-orange */
+  --primary-foreground: 0 0% 100%; /* white */
+  --secondary: 32 92% 51%;         /* orange-wheel */
+  --secondary-foreground: 0 0% 100%; /* white */
+  --muted: 41 9% 85%;              /* light eerie */
+  --muted-foreground: 40 10% 10%;  /* eerie-black */
+  --accent: 41 9% 85%;             /* light eerie */
+  --accent-foreground: 40 10% 10%; /* eerie-black */
+  --destructive: 0 84% 60%;        /* red for errors */
+  --destructive-foreground: 0 0% 100%; /* white */
+  --border: 41 9% 85%;             /* light eerie */
+  --input: 41 9% 85%;              /* light eerie */
+  --ring: 14 94% 46%;              /* hot-orange */
   --radius: 0.5rem;
-  --chart-1: 252 87% 67%;
-  --chart-2: 292 91% 73%;
-  --chart-3: 199 89% 48%;
-  --chart-4: 22 100% 50%;
+
+  /* Chart Colors */
+  --chart-1: 14 94% 46%;           /* hot-orange */
+  --chart-2: 32 92% 51%;           /* orange-wheel */
+  --chart-3: 71 19% 56%;           /* moss */
+  --chart-4: 41 9% 15%;            /* eerie-light */
+  --chart-5: 40 10% 10%;           /* eerie-black */
+}
+
+.dark {
+  /* Dark mode */
+  --background: 30 15% 6%;         /* smoky-black */
+  --foreground: 0 0% 100%;         /* white */
+  --card: 40 10% 10%;              /* eerie-black */
+  --card-foreground: 0 0% 100%;    /* white */
+  --popover: 40 10% 10%;           /* eerie-black */
+  --popover-foreground: 0 0% 100%; /* white */
+  --primary: 14 94% 46%;           /* hot-orange */
+  --primary-foreground: 0 0% 100%; /* white */
+  --secondary: 32 92% 51%;         /* orange-wheel */
+  --secondary-foreground: 30 15% 6%; /* smoky-black */
+  --muted: 41 9% 15%;              /* eerie-light */
+  --muted-foreground: 0 0% 100%;   /* white */
+  --accent: 41 9% 15%;             /* eerie-light */
+  --accent-foreground: 0 0% 100%;  /* white */
+  --destructive: 0 62.8% 30.6%;    /* darker red */
+  --destructive-foreground: 0 0% 98%; /* white */
+  --border: 41 9% 15%;             /* eerie-light */
+  --input: 41 9% 15%;              /* eerie-light */
+  --ring: 14 94% 46%;              /* hot-orange */
 }
 
 @theme inline {
+  /* Brand Colors */
+  --color-smoky-black: hsl(var(--smoky-black));
+  --color-eerie-light: hsl(var(--eerie-light));
+  --color-eerie-black: hsl(var(--eerie-black));
+  --color-hot-orange: hsl(var(--hot-orange));
+  --color-moss: hsl(var(--moss));
+  --color-orange-wheel: hsl(var(--orange-wheel));
+  --color-night: hsl(var(--night));
+  --color-white: hsl(var(--white));
+  --color-hero-accent: hsl(var(--hero-accent));
+
+  /* shadcn/ui Colors */
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-secondary: hsl(var(--secondary));
@@ -40,9 +94,13 @@
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -54,4 +112,58 @@
 body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
+}
+
+/* Container and spacing utilities */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }

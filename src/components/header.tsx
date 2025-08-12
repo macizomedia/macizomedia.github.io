@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ThemeSwitcher } from "@/components/theme-switcher"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -22,7 +23,7 @@ export function Header() {
                 BSL
               </div>
             </div>
-            <span className="hidden font-bold sm:inline-block">BlockSpark Labs</span>
+            <span className="hidden font-bold sm:inline-block">Abquanta</span>
           </Link>
         </div>
         <nav className="hidden md:flex gap-6">
@@ -42,7 +43,8 @@ export function Header() {
             Contact
           </Link>
         </nav>
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeSwitcher />
           <Button asChild>
             <Link href="#contact">Get a Free Consultation</Link>
           </Button>
@@ -69,6 +71,9 @@ export function Header() {
             <Link href="#contact" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Contact
             </Link>
+            <div className="flex items-center justify-between mt-4">
+              <ThemeSwitcher />
+            </div>
             <Button asChild className="w-full mt-2">
               <Link href="#contact" onClick={toggleMenu}>
                 Get a Free Consultation

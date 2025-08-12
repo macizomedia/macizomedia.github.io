@@ -13,10 +13,10 @@ export function Footer() {
                   BSL
                 </div>
               </div>
-              <span className="font-bold">BlockSpark Labs</span>
+              <span className="font-bold">Abquanta</span>
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md">
-              BlockSpark Labs is a leading blockchain development agency specializing in building decentralized
+              Abquanta is a leading blockchain development agency specializing in building decentralized
               applications, smart contracts, and Web3 integrations that transform businesses and empower innovation.
             </p>
             <div className="flex space-x-4 mt-6">
@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} BlockSpark Labs. All rights reserved.
+            &copy; {new Date().getFullYear()} Abquanta. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary">

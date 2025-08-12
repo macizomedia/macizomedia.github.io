@@ -12,7 +12,7 @@ const testimonials = [
     position: "CTO, FinTech Innovations",
     image: "/placeholder.svg?height=200&width=200",
     quote:
-      "BlockSpark Labs transformed our traditional finance platform with their blockchain expertise. Their team delivered a secure, scalable solution that exceeded our expectations and opened new revenue streams for our business.",
+      "Abquanta transformed our traditional finance platform with their blockchain expertise. Their team delivered a secure, scalable solution that exceeded our expectations and opened new revenue streams for our business.",
     rating: 5,
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     position: "Founder, NFT Collective",
     image: "/placeholder.svg?height=200&width=200",
     quote:
-      "Working with BlockSpark Labs on our NFT marketplace was a game-changer. Their technical knowledge combined with their understanding of the NFT space resulted in a platform that artists and collectors love to use.",
+      "Working with Abquanta on our NFT marketplace was a game-changer. Their technical knowledge combined with their understanding of the NFT space resulted in a platform that artists and collectors love to use.",
     rating: 5,
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     position: "Lead Developer, GameChain",
     image: "/placeholder.svg?height=200&width=200",
     quote:
-      "The smart contract architecture BlockSpark Labs developed for our gaming platform is nothing short of brilliant. Secure, gas-efficient, and perfectly aligned with our complex requirements.",
+      "The smart contract architecture Abquanta developed for our gaming platform is nothing short of brilliant. Secure, gas-efficient, and perfectly aligned with our complex requirements.",
     rating: 5,
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
     position: "Operations Director, DeFi Protocol",
     image: "/placeholder.svg?height=200&width=200",
     quote:
-      "BlockSpark Labs' attention to detail and security-first approach gave us complete confidence in our DeFi protocol launch. Their team was responsive, professional, and delivered exactly what we needed.",
+      "Abquanta's attention to detail and security-first approach gave us complete confidence in our DeFi protocol launch. Their team was responsive, professional, and delivered exactly what we needed.",
     rating: 4,
   },
 ]
@@ -58,7 +58,7 @@ export function TestimonialsSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Client Testimonials</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Hear what our clients have to say about working with BlockSpark Labs
+            Hear what our clients have to say about working with Abquanta
           </p>
         </div>
 
