@@ -19,14 +19,12 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Brand colors
-        "smoky-black": "hsl(var(--smoky-black))",
-        "eerie-light": "hsl(var(--eerie-light))",
-        "eerie-black": "hsl(var(--eerie-black))",
-        "hot-orange": "hsl(var(--hot-orange))",
-        "moss": "hsl(var(--moss))",
-        "orange-wheel": "hsl(var(--orange-wheel))",
-        "night": "hsl(var(--night))",
+        // Tech Mono brand colors
+        "tech-mono-5": "hsl(var(--tech-mono-5))",
+        "tech-mono-3": "hsl(var(--tech-mono-3))",
+        "tech-mono-2": "hsl(var(--tech-mono-2))",
+        "tech-mono-1": "hsl(var(--tech-mono-1))",
+        "tech-mono-4": "hsl(var(--tech-mono-4))",
         "white": "hsl(var(--white))",
         "hero-accent": "hsl(var(--hero-accent))",
         
@@ -83,6 +81,12 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        'oswald': ['var(--font-oswald)', 'sans-serif'],
+        'space-mono': ['var(--font-space-mono)', 'monospace'],
+        'sans': ['var(--font-geist-sans)', 'sans-serif'],
+        'mono': ['var(--font-geist-mono)', 'monospace'],
       },
     },
   },

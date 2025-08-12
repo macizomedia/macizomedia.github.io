@@ -51,7 +51,7 @@ export function ContactSection() {
     <section id="contact" className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Contact Us</h2>
+          <h2 className="brutalist-section-title text-3xl sm:text-4xl md:text-5xl text-tech-mono-2">Contact Us</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your business with blockchain technology? Get in touch with our team.
           </p>

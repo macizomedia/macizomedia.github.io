@@ -1,85 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  /* Custom Brand Colors - Fixed values */
-  --smoky-black: 30 15% 6%;        /* #100C0B */
-  --eerie-light: 41 9% 15%;        /* #282723 */
-  --eerie-black: 40 10% 10%;       /* #1C1B17 */
-  --hot-orange: 14 94% 46%;        /* #EB4604 */
-  --moss: 71 19% 56%;              /* #99A57D */
-  --orange-wheel: 32 92% 51%;      /* #F77E0D */
-  --night: 41 11% 9%;              /* #171614 */
+  /* Tech Mono Color Palette - Pure Monochrome */
+  --tech-mono-5: 0 0% 5%;          /* #0D0D0D - primary */
+  --tech-mono-3: 0 0% 25%;         /* #403F3F - secondary */
+  --tech-mono-2: 0 0% 45%;         /* #737272 - muted */
+  --tech-mono-1: 0 0% 65%;         /* #A6A5A4 - subtle */
+  --tech-mono-4: 30 3% 95%;        /* #F2F1F0 - background */
   --white: 0 0% 100%;              /* #FFFFFF */
 
-  /* Hero-specific color (moss only for hero) */
-  --hero-accent: 71 19% 56%;       /* moss */
+  /* Hero-specific color (use tech-mono-3 for hero accent) */
+  --hero-accent: 0 0% 25%;         /* tech-mono-3 */
 
   /* Light mode (default) */
-  --background: 0 0% 100%;         /* white */
-  --foreground: 40 10% 10%;        /* eerie-black */
-  --card: 0 0% 98%;                /* light gray */
-  --card-foreground: 40 10% 10%;   /* eerie-black */
+  --background: 30 3% 95%;         /* tech-mono-4 */
+  --foreground: 0 0% 5%;           /* tech-mono-5 */
+  --card: 0 0% 98%;                /* slightly lighter than background */
+  --card-foreground: 0 0% 5%;      /* tech-mono-5 */
   --popover: 0 0% 100%;            /* white */
-  --popover-foreground: 40 10% 10%; /* eerie-black */
-  --primary: 14 94% 46%;           /* hot-orange */
+  --popover-foreground: 0 0% 5%;   /* tech-mono-5 */
+  --primary: 0 0% 5%;              /* tech-mono-5 */
   --primary-foreground: 0 0% 100%; /* white */
-  --secondary: 32 92% 51%;         /* orange-wheel */
+  --secondary: 0 0% 25%;           /* tech-mono-3 */
   --secondary-foreground: 0 0% 100%; /* white */
-  --muted: 41 9% 85%;              /* light eerie */
-  --muted-foreground: 40 10% 10%;  /* eerie-black */
-  --accent: 41 9% 85%;             /* light eerie */
-  --accent-foreground: 40 10% 10%; /* eerie-black */
-  --destructive: 0 84% 60%;        /* red for errors */
+  --muted: 0 0% 45%;               /* tech-mono-2 */
+  --muted-foreground: 0 0% 5%;     /* tech-mono-5 */
+  --accent: 0 0% 25%;              /* tech-mono-3 */
+  --accent-foreground: 0 0% 100%;  /* white */
+  --destructive: 0 0% 15%;         /* dark gray for errors */
   --destructive-foreground: 0 0% 100%; /* white */
-  --border: 41 9% 85%;             /* light eerie */
-  --input: 41 9% 85%;              /* light eerie */
-  --ring: 14 94% 46%;              /* hot-orange */
+  --border: 0 0% 65%;              /* tech-mono-1 */
+  --input: 0 0% 98%;               /* light gray */
+  --ring: 0 0% 25%;                /* tech-mono-3 */
   --radius: 0.5rem;
 
   /* Chart Colors */
-  --chart-1: 14 94% 46%;           /* hot-orange */
-  --chart-2: 32 92% 51%;           /* orange-wheel */
-  --chart-3: 71 19% 56%;           /* moss */
-  --chart-4: 41 9% 15%;            /* eerie-light */
-  --chart-5: 40 10% 10%;           /* eerie-black */
+  --chart-1: 0 0% 5%;              /* tech-mono-5 */
+  --chart-2: 0 0% 25%;             /* tech-mono-3 */
+  --chart-3: 0 0% 45%;             /* tech-mono-2 */
+  --chart-4: 0 0% 65%;             /* tech-mono-1 */
+  --chart-5: 30 3% 95%;            /* tech-mono-4 */
 }
 
 .dark {
-  /* Dark mode */
-  --background: 30 15% 6%;         /* smoky-black */
-  --foreground: 0 0% 100%;         /* white */
-  --card: 40 10% 10%;              /* eerie-black */
-  --card-foreground: 0 0% 100%;    /* white */
-  --popover: 40 10% 10%;           /* eerie-black */
-  --popover-foreground: 0 0% 100%; /* white */
-  --primary: 14 94% 46%;           /* hot-orange */
-  --primary-foreground: 0 0% 100%; /* white */
-  --secondary: 32 92% 51%;         /* orange-wheel */
-  --secondary-foreground: 30 15% 6%; /* smoky-black */
-  --muted: 41 9% 15%;              /* eerie-light */
-  --muted-foreground: 0 0% 100%;   /* white */
-  --accent: 41 9% 15%;             /* eerie-light */
-  --accent-foreground: 0 0% 100%;  /* white */
-  --destructive: 0 62.8% 30.6%;    /* darker red */
-  --destructive-foreground: 0 0% 98%; /* white */
-  --border: 41 9% 15%;             /* eerie-light */
-  --input: 41 9% 15%;              /* eerie-light */
-  --ring: 14 94% 46%;              /* hot-orange */
+  /* Dark mode - inverted monochrome palette */
+  --background: 0 0% 5%;           /* tech-mono-5 */
+  --foreground: 30 3% 95%;         /* tech-mono-4 */
+  --card: 0 0% 8%;                 /* slightly lighter than background */
+  --card-foreground: 30 3% 95%;    /* tech-mono-4 */
+  --popover: 0 0% 8%;              /* dark gray */
+  --popover-foreground: 30 3% 95%; /* tech-mono-4 */
+  --primary: 0 0% 65%;             /* tech-mono-1 */
+  --primary-foreground: 0 0% 5%;   /* tech-mono-5 */
+  --secondary: 0 0% 45%;           /* tech-mono-2 */
+  --secondary-foreground: 0 0% 5%; /* tech-mono-5 */
+  --muted: 0 0% 25%;               /* tech-mono-3 */
+  --muted-foreground: 0 0% 65%;    /* tech-mono-1 */
+  --accent: 0 0% 65%;              /* tech-mono-1 */
+  --accent-foreground: 0 0% 5%;    /* tech-mono-5 */
+  --destructive: 0 0% 75%;         /* light gray for errors in dark mode */
+  --destructive-foreground: 0 0% 5%; /* tech-mono-5 */
+  --border: 0 0% 25%;              /* tech-mono-3 */
+  --input: 0 0% 15%;               /* dark gray */
+  --ring: 0 0% 65%;                /* tech-mono-1 */
 }
 
+/* Temporarily commenting out @theme inline to test
 @theme inline {
-  /* Brand Colors */
-  --color-smoky-black: hsl(var(--smoky-black));
-  --color-eerie-light: hsl(var(--eerie-light));
-  --color-eerie-black: hsl(var(--eerie-black));
-  --color-hot-orange: hsl(var(--hot-orange));
-  --color-moss: hsl(var(--moss));
-  --color-orange-wheel: hsl(var(--orange-wheel));
-  --color-night: hsl(var(--night));
+  Tech Mono Brand Colors
+  --color-tech-mono-5: hsl(var(--tech-mono-5));
+  --color-tech-mono-3: hsl(var(--tech-mono-3));
+  --color-tech-mono-2: hsl(var(--tech-mono-2));
+  --color-tech-mono-1: hsl(var(--tech-mono-1));
+  --color-tech-mono-4: hsl(var(--tech-mono-4));
   --color-white: hsl(var(--white));
   --color-hero-accent: hsl(var(--hero-accent));
 
-  /* shadcn/ui Colors */
+  shadcn/ui Colors
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -100,10 +97,11 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  /* Fonts */
+  Fonts
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+*/
 
 * {
   border-color: hsl(var(--border));
@@ -166,4 +164,53 @@ html {
 :focus-visible {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
+}
+
+/* Brutalist Typography Styles with Oswald - Clean/Flat */
+.brutalist-title {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.brutalist-hero {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  font-size: clamp(2.5rem, 8vw, 8rem);
+  transform: scaleY(1.1);
+}
+
+.brutalist-subtitle {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.brutalist-section-title {
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* Airport Board Effect */
+.airport-char {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.airport-char:before {
+  content: attr(data-char);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 100%;
 }

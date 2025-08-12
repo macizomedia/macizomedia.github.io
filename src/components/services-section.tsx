@@ -64,7 +64,7 @@ export function ServicesSection() {
     <section id="services" className="py-20 bg-muted/50">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Our Services</h2>
+          <h2 className="brutalist-section-title text-3xl sm:text-4xl md:text-5xl text-tech-mono-2">Our Services</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Comprehensive blockchain solutions tailored to your business needs
           </p>

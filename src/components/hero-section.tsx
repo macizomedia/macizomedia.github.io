@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { WireframeGrid } from "@/components/wireframe-grid"
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false)
@@ -20,58 +21,59 @@ export function HeroSection() {
     <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20"></div>
-
-        {/* Animated blockchain nodes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute h-40 w-40 rounded-full bg-primary/10 backdrop-blur-sm"
-              initial={{
-                x: Math.random() * 100 - 50 + "%",
-                y: Math.random() * 100 - 50 + "%",
-                scale: Math.random() * 0.5 + 0.5,
-              }}
-              animate={{
-                x: [Math.random() * 100 - 50 + "%", Math.random() * 100 - 50 + "%", Math.random() * 100 - 50 + "%"],
-                y: [Math.random() * 100 - 50 + "%", Math.random() * 100 - 50 + "%", Math.random() * 100 - 50 + "%"],
-              }}
-              transition={{
-                duration: 20 + Math.random() * 10,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "reverse",
-              }}
-            />
-          ))}
-        </div>
+        {/* Wireframe Grid Background */}
+        <WireframeGrid />
+        
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background/70"></div>
       </div>
 
       <div className="container relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center relative">
+          {/* Main Title */}
           <motion.h1
-            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-hero-accent"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            className="brutalist-hero text-tech-mono-2 mb-8 select-none relative"
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            Powering the Decentralized Future with Expert Blockchain Solutions
+            {/* Welcome text above title */}
+            <motion.div
+              className="absolute -top-8 md:-top-12 lg:-top-16 left-1/2 transform -translate-x-1/2 z-10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <span className="text-base md:text-lg lg:text-xl text-tech-mono-3 font-space-mono font-normal">
+                Welcome to our lab
+              </span>
+            </motion.div>
+            
+            <span className="block">DECENTRALIZED</span>
+            <span className="block -mt-4 text-tech-mono-5">FUTURE</span>
           </motion.h1>
           <motion.p
-            className="mt-6 text-lg text-muted-foreground md:text-xl"
+            className="brutalist-subtitle text-tech-mono-3 mb-8 text-base md:text-lg max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            EXPERT BLOCKCHAIN SOLUTIONS
+          </motion.p>
+          <motion.p
+            className="text-base text-muted-foreground md:text-lg max-w-2xl mx-auto font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             Abquanta specializes in building cutting-edge decentralized applications, secure smart contracts, and
             seamless Web3 integrations that transform businesses and empower innovation in the blockchain ecosystem.
           </motion.p>
           <motion.div
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="#services">Explore Our Services</Link>

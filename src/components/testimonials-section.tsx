@@ -56,7 +56,7 @@ export function TestimonialsSection() {
     <section id="testimonials" className="py-20">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Client Testimonials</h2>
+          <h2 className="brutalist-section-title text-3xl sm:text-4xl md:text-5xl text-tech-mono-2">Client Testimonials</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             Hear what our clients have to say about working with Abquanta
           </p>
