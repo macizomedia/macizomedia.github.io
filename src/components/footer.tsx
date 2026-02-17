@@ -20,15 +20,15 @@ export function Footer() {
               applications, smart contracts, and Web3 integrations that transform businesses and empower innovation.
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://x.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -70,7 +70,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-primary">
+                <Link href="/#why-choose-us" className="text-muted-foreground hover:text-primary">
                   About Us
                 </Link>
               </li>
@@ -80,7 +80,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-primary">
+                <Link href="/#services" className="text-muted-foreground hover:text-primary">
                   Blog
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-primary">
+                <Link href="/#contact" className="text-muted-foreground hover:text-primary">
                   Careers
                 </Link>
               </li>
@@ -103,13 +103,13 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Abquanta. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="/#contact" className="text-sm text-muted-foreground hover:text-primary">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="/#contact" className="text-sm text-muted-foreground hover:text-primary">
               Terms of Service
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
+            <Link href="/#contact" className="text-sm text-muted-foreground hover:text-primary">
               Cookie Policy
             </Link>
           </div>

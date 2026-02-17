@@ -49,12 +49,18 @@ export function Header() {
             <Link href="#contact">Get a Free Consultation</Link>
           </Button>
         </div>
-        <button className="md:hidden" onClick={toggleMenu}>
+        <button
+          className="md:hidden"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+        >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
       {isMenuOpen && (
-        <div className="container md:hidden py-4 pb-6">
+        <div id="mobile-navigation" className="container md:hidden py-4 pb-6">
           <nav className="flex flex-col space-y-4">
             <Link href="#services" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Services

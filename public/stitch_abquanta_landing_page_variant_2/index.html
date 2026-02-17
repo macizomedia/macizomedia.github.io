@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abquanta // Ethical Automation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&amp;family=IBM+Plex+Sans:wght@400&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "editorial-bg": "#282828",
+                        "editorial-text": "#e5e5e5",
+                        "editorial-muted": "#808080",
+                        "editorial-border": "rgba(255, 255, 255, 0.15)",
+                        "accent": "#ffffff"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["IBM Plex Sans", "sans-serif"],
+                        "mono": ["IBM Plex Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-editorial-bg text-editorial-text font-body selection:bg-white selection:text-editorial-bg;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            }
+            h1 {
+                font-family: 'Space Grotesk';
+                font-weight: 800;
+                font-size: 76px;
+                line-height: 76px;
+                letter-spacing: -0.02em;
+            }
+            h2 {
+                font-family: 'Space Grotesk';
+                font-weight: 700;
+                font-size: 49px;
+                line-height: 54px;
+                letter-spacing: 0;
+            }
+            h3 {
+                font-family: 'Space Grotesk';
+                font-weight: 500;
+                font-size: 31px;
+                line-height: 36px;
+                letter-spacing: 0.01em;
+            }
+        }
+        .btn-primary {
+            @apply bg-black text-white px-6 py-4 border-b-2 border-accent uppercase font-mono text-[12px] tracking-[0.04em] flex items-center justify-center transition-all hover:brightness-125;
+            border-radius: 0;
+        }
+        .btn-secondary {
+            @apply bg-white text-black px-6 py-4 border-[3px] border-black uppercase font-mono text-[12px] tracking-[0.04em] flex items-center justify-center transition-all hover:bg-neutral-100;
+            border-radius: 0;
+        }
+        .meta-text {
+            @apply font-mono text-[12px] leading-[16px] tracking-[0.04em] uppercase;
+        }
+        .brutalist-card {
+            @apply border-[3px] border-editorial-border p-8 bg-black/10 relative;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<nav class="sticky top-0 z-50 bg-editorial-bg/95 backdrop-blur-sm border-b border-editorial-border h-20">
+<div class="max-w-[1440px] mx-auto flex justify-between items-center h-full px-8">
+<div class="flex items-center space-x-4">
+<span class="font-display text-3xl font-extrabold tracking-tighter uppercase">Abqanta</span>
+</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="meta-text hover:text-white transition-colors" href="#">Archives</a>
+<a class="meta-text hover:text-white transition-colors" href="#">Systems</a>
+<a class="meta-text hover:text-white transition-colors" href="#">Ethics</a>
+<button class="btn-primary py-2 px-6">Connect</button>
+</div>
+</div>
+</nav>
+<main>
+<section class="max-w-[1440px] mx-auto px-8 py-20 relative">
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start relative z-10">
+<div>
+<div class="meta-text text-editorial-muted mb-8">System_ID // AQ-04</div>
+<h1>Abqanta: Ethical <span class="text-white/40">Automation</span></h1>
+<p class="text-[16px] leading-[24px] text-editorial-muted mt-8 max-w-lg">
+                    Applied intelligence research laboratory. We design creative systems and ethical governance frameworks for the autonomous enterprise.
+                </p>
+<div class="flex gap-4 mt-12">
+<button class="btn-primary">Initialize System</button>
+<button class="btn-secondary">View Blueprints</button>
+</div>
+</div>
+<div class="relative bg-black/20 aspect-video md:aspect-square border-[3px] border-editorial-border overflow-hidden">
+<img alt="System Module Poster" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQlqhkc-PLK2uzDaNcBDKDJIpjmim4EG4XjYY1gUcsEDE6yJRWvf4PmKw6UpUeh5iKD-dJ9iTwwZpLQ0wDydIgwLzrfdyZP2PHOrycrmvIH3cRGUajcvE_GjxY0wYibaJx18iQI7jhdyJe_nVwGTeUAap0xDutWtF8_Xz_Q8cYOxdZZxMhL2QTG7LXXbu28SBRMQ6FORBAuLhttKY7qq2vqOe_oHaXm9Zm_Um1QithPMa--4yEFcdWmuNn75DQtbNM_nz7kKI2BD0"/>
+<div class="absolute bottom-4 left-4 meta-text bg-black/40 p-2 border border-white/10">FIG. 01_ARCHIVAL_CORE</div>
+</div>
+</div>
+</section>
+<section class="border-y border-editorial-border bg-black/10 py-8">
+<div class="max-w-[1440px] mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col">
+<span class="meta-text text-editorial-muted mb-1">Status</span>
+<span class="meta-text text-white">NOMINAL // 100%</span>
+</div>
+<div class="flex flex-col">
+<span class="meta-text text-editorial-muted mb-1">Processing_Load</span>
+<span class="meta-text text-white">4.2 TB/SEC</span>
+</div>
+<div class="flex flex-col">
+<span class="meta-text text-editorial-muted mb-1">Ethical_Compliance</span>
+<span class="meta-text text-white">PROTOCOL_01_ACTIVE</span>
+</div>
+<div class="flex flex-col">
+<span class="meta-text text-editorial-muted mb-1">Global_Nodes</span>
+<span class="meta-text text-white">12_ACTIVE_SITES</span>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-8 py-20 border-b border-editorial-border">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-32">
+<div>
+<div class="meta-text text-editorial-muted mb-4">Problem_Space</div>
+<h3 class="mb-6">The transparency gap in enterprise AI.</h3>
+<p class="text-[16px] leading-[24px] text-editorial-muted">
+                    Most automation systems operate as black boxes, providing efficiency at the cost of accountability and human intuition. This creates an unsustainable divide between technology and ethical governance.
+                </p>
+</div>
+<div>
+<div class="meta-text text-editorial-muted mb-4">Solution_Framework</div>
+<h3 class="mb-6">Transparent, interconnected modules.</h3>
+<p class="text-[16px] leading-[24px] text-editorial-muted">
+                    We replace opaque legacy systems with a blueprint-first architecture. Every decision is logged, every model is audited, and every output is aligned with human-centric values by design.
+                </p>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-8 py-20">
+<div class="meta-text text-editorial-muted mb-12">Service_Modules</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="brutalist-card flex flex-col h-full group">
+<div class="h-2 w-full bg-white/10 absolute top-0 left-0"></div>
+<h3 class="mb-4">AI Research</h3>
+<p class="text-[16px] leading-[24px] text-editorial-muted mb-8 line-clamp-2">
+                    Advanced latent diffusion models and semantic mapping for high-complexity datasets.
+                </p>
+<div class="mt-auto pt-8 border-t border-editorial-border">
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<span class="meta-text text-editorial-muted block">Compute</span>
+<span class="meta-text">H100_Cluster</span>
+</div>
+<div>
+<span class="meta-text text-editorial-muted block">Layer</span>
+<span class="meta-text">Latent_Map</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+<span class="meta-text text-editorial-muted">MOD_01</span>
+</div>
+</div>
+</div>
+<div class="brutalist-card flex flex-col h-full group">
+<div class="h-2 w-full bg-white absolute top-0 left-0"></div>
+<h3 class="mb-4">System Design</h3>
+<p class="text-[16px] leading-[24px] text-editorial-muted mb-8 line-clamp-2">
+                    Full-stack automation pipelines bridging legacy infra and intelligent agents.
+                </p>
+<div class="mt-auto pt-8 border-t border-editorial-border">
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<span class="meta-text text-editorial-muted block">Latency</span>
+<span class="meta-text">&lt; 0.05ms</span>
+</div>
+<div>
+<span class="meta-text text-editorial-muted block">Stack</span>
+<span class="meta-text">Rust_Core</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+<span class="meta-text text-editorial-muted">MOD_02</span>
+</div>
+</div>
+</div>
+<div class="brutalist-card flex flex-col h-full group">
+<div class="h-2 w-full bg-white/10 absolute top-0 left-0"></div>
+<h3 class="mb-4">Ethics Audit</h3>
+<p class="text-[16px] leading-[24px] text-editorial-muted mb-8 line-clamp-2">
+                    Rigorous frameworks for bias mitigation and real-time transparency reporting.
+                </p>
+<div class="mt-auto pt-8 border-t border-editorial-border">
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div>
+<span class="meta-text text-editorial-muted block">Standard</span>
+<span class="meta-text">AQ_V4_CORE</span>
+</div>
+<div>
+<span class="meta-text text-editorial-muted block">Log</span>
+<span class="meta-text">Immutable</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+<span class="meta-text text-editorial-muted">MOD_03</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="max-w-[1440px] mx-auto px-8 mb-12">
+<div class="meta-text text-editorial-muted">Operational_Visibility</div>
+<h2 class="mt-4">The Global Blueprint</h2>
+</div>
+<div class="w-full h-[600px] relative">
+<img alt="Large technical visual" class="w-full h-full object-cover grayscale brightness-50 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt5POHSi7tynPdXaThlJpcU0h31X0TOVjqqDOK4zDJodfb32c77aaDz-k_Rpon-eXEBnnf9tOqzvxxAhq_N_sOAetmYl0jU3NqG46YAFJtrEInn-PyeRH58KJTV5fkVFL_48A3YrUYs7VZR-iMGYllZrb9TgXac9lf2Kru9XfDulbhnwKeDYDiIId0bOQyxLFMAopQ50ddkwWEgZGZ1AZH-CkKaopq2BCLVd6G34LPOlZsVY5SYZnprxJFwZkDcEyyHHFppfach1w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-editorial-bg to-transparent"></div>
+<div class="absolute bottom-12 left-12 p-8 bg-black/60 backdrop-blur-md border border-white/10 max-w-md">
+<div class="meta-text text-white mb-4">Location_Readout</div>
+<div class="meta-text mb-6">8.3077° N, 62.7093° W // CIUDAD GUAYANA</div>
+<p class="text-[16px] text-editorial-muted">
+                    Our primary research facility serves as the testing ground for all autonomous protocols before global deployment.
+                </p>
+</div>
+</div>
+</section>
+<section class="max-w-[1440px] mx-auto px-8 py-20 text-center border-t border-editorial-border">
+<div class="meta-text text-editorial-muted mb-8">Request_Integration</div>
+<h2>Ready to upgrade your system?</h2>
+<div class="flex flex-col md:flex-row justify-center gap-6 mt-12">
+<button class="btn-primary min-w-[240px]">Start Deployment</button>
+<button class="btn-secondary min-w-[240px]">Download Docs</button>
+</div>
+</section>
+</main>
+<footer class="bg-black/40 border-t border-editorial-border py-20 px-8">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display text-2xl font-black uppercase mb-6">Abquanta</div>
+<p class="text-[12px] meta-text text-editorial-muted">
+                ESTABLISHED 2024<br/>
+                LAB_REF: AQ-04-DARK
+            </p>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="meta-text text-white border-b border-white/10 pb-2 mb-2">Connect</div>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Terminal_X</a>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Research_Gate</a>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Secure_Mail</a>
+</div>
+<div class="flex flex-col space-y-4">
+<div class="meta-text text-white border-b border-white/10 pb-2 mb-2">Network</div>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Global_Nodes</a>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Compute_Access</a>
+<a class="meta-text text-editorial-muted hover:text-white" href="#">Framework_V4</a>
+</div>
+<div>
+<div class="meta-text text-white border-b border-white/10 pb-2 mb-2">Subscription</div>
+<div class="relative mt-4">
+<input class="bg-transparent border-b border-editorial-border w-full py-2 meta-text focus:ring-0 focus:border-white outline-none placeholder:text-white/20" placeholder="EMAIL_ADDR" type="email"/>
+<button class="absolute right-0 bottom-2 text-white/40 hover:text-white">
+<span class="material-symbols-outlined text-sm">north_east</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-editorial-border flex flex-col md:flex-row justify-between text-editorial-muted">
+<div class="meta-text">© 2024 Abquanta Applied Intelligence // All Rights Reserved</div>
+<div class="meta-text mt-4 md:mt-0">LAST_UPDATE: 2024.05.22_14:02_UTC</div>
+</div>
+</footer>
+
+</body></html>

@@ -149,7 +149,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">contact@blocksparklabs.com</p>
+                  <p className="text-muted-foreground">contact@abquanta.com</p>
                   <p className="text-sm text-muted-foreground mt-1">For general inquiries and project discussions</p>
                 </div>
               </div>

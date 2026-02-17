@@ -1,22 +1,19 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { WireframeGrid } from "@/components/wireframe-grid"
+
+const WireframeGrid = dynamic(
+  () => import("@/components/wireframe-grid").then((mod) => mod.WireframeGrid),
+  {
+    ssr: false,
+    loading: () => <div className="absolute inset-0 w-full h-full bg-transparent" aria-hidden="true" />,
+  }
+)
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       {/* Background elements */}

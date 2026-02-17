@@ -1,6 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
@@ -10,7 +9,7 @@ const testimonials = [
   {
     name: "Alex Thompson",
     position: "CTO, FinTech Innovations",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/placeholder.svg",
     quote:
       "Abquanta transformed our traditional finance platform with their blockchain expertise. Their team delivered a secure, scalable solution that exceeded our expectations and opened new revenue streams for our business.",
     rating: 5,
@@ -18,7 +17,7 @@ const testimonials = [
   {
     name: "Sarah Chen",
     position: "Founder, NFT Collective",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/placeholder.svg",
     quote:
       "Working with Abquanta on our NFT marketplace was a game-changer. Their technical knowledge combined with their understanding of the NFT space resulted in a platform that artists and collectors love to use.",
     rating: 5,
@@ -26,7 +25,7 @@ const testimonials = [
   {
     name: "Michael Rodriguez",
     position: "Lead Developer, GameChain",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/placeholder.svg",
     quote:
       "The smart contract architecture Abquanta developed for our gaming platform is nothing short of brilliant. Secure, gas-efficient, and perfectly aligned with our complex requirements.",
     rating: 5,
@@ -34,7 +33,7 @@ const testimonials = [
   {
     name: "Emily Watson",
     position: "Operations Director, DeFi Protocol",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/placeholder.svg",
     quote:
       "Abquanta's attention to detail and security-first approach gave us complete confidence in our DeFi protocol launch. Their team was responsive, professional, and delivered exactly what we needed.",
     rating: 4,
@@ -42,16 +41,6 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
   return (
     <section id="testimonials" className="py-20">
       <div className="container">
@@ -87,6 +76,7 @@ export function TestimonialsSection() {
                             alt={testimonial.name}
                             fill
                             className="object-cover"
+                            sizes="48px"
                           />
                         </div>
                         <div>

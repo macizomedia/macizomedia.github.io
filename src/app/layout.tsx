@@ -1,28 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Oswald, Space_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
-
-const spaceMono = Space_Mono({
-  variable: "--font-space-mono",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Abquanta | Blockchain Development Agency",
@@ -55,11 +32,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const themeInitScript = `
+    (() => {
+      try {
+        const saved = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved === "light" || saved === "dark" ? saved : (systemDark ? "dark" : "light");
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(theme);
+      } catch (_) {}
+    })();
+  `;
+
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} ${spaceMono.variable} antialiased min-h-screen bg-background text-foreground font-sans`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="antialiased min-h-screen bg-background text-foreground font-sans">
         {children}
       </body>
     </html>

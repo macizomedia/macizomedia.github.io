@@ -4,68 +4,61 @@ import React, { useRef, useMemo, useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 
+const noise = (x: number, y: number, seed: number = 0) => {
+  const n = Math.sin((x + seed) * 12.9898 + (y + seed * 0.7) * 78.233 + seed * 37.719) * 43758.5453
+  return (n - Math.floor(n)) * 2 - 1
+}
+
+const smoothNoise = (x: number, y: number, seed: number = 0) => {
+  const corners = (noise(x - 1, y - 1, seed) + noise(x + 1, y - 1, seed) + noise(x - 1, y + 1, seed) + noise(x + 1, y + 1, seed)) / 16
+  const sides = (noise(x - 1, y, seed) + noise(x + 1, y, seed) + noise(x, y - 1, seed) + noise(x, y + 1, seed)) / 8
+  const center = noise(x, y, seed) / 4
+  return corners + sides + center
+}
+
+const interpolatedNoise = (x: number, y: number, seed: number = 0) => {
+  const intX = Math.floor(x)
+  const fracX = x - intX
+  const intY = Math.floor(y)
+  const fracY = y - intY
+  const smoothX = (1 - Math.cos(fracX * Math.PI)) / 2
+  const smoothY = (1 - Math.cos(fracY * Math.PI)) / 2
+  const v1 = smoothNoise(intX, intY, seed)
+  const v2 = smoothNoise(intX + 1, intY, seed)
+  const v3 = smoothNoise(intX, intY + 1, seed)
+  const v4 = smoothNoise(intX + 1, intY + 1, seed)
+  const i1 = v1 * (1 - smoothX) + v2 * smoothX
+  const i2 = v3 * (1 - smoothX) + v4 * smoothX
+  return i1 * (1 - smoothY) + i2 * smoothY
+}
+
+const fractalNoise = (x: number, y: number, octaves: number = 6, seed: number = 0) => {
+  let value = 0
+  let amplitude = 1
+  let frequency = 0.1
+  let maxValue = 0
+
+  for (let i = 0; i < octaves; i++) {
+    value += interpolatedNoise(x * frequency, y * frequency, seed + i * 100) * amplitude
+    maxValue += amplitude
+    amplitude *= 0.5
+    frequency *= 2
+  }
+
+  return value / maxValue
+}
+
+const circularGradient = (x: number, y: number, radius: number = 16) => {
+  const distance = Math.sqrt(x * x + y * y)
+  return Math.max(0, 1 - (distance / radius))
+}
+
 function WireframePlane() {
   const meshRef = useRef<THREE.Mesh>(null)
 
-  // Fractal noise functions for organic terrain generation
-  const noise = (x: number, y: number, seed: number = 0) => {
-    // Improved pseudo-random noise function with proper seed integration
-    const n = Math.sin((x + seed) * 12.9898 + (y + seed * 0.7) * 78.233 + seed * 37.719) * 43758.5453
-    return (n - Math.floor(n)) * 2 - 1
-  }
-
-  const smoothNoise = (x: number, y: number, seed: number = 0) => {
-    const corners = (noise(x-1, y-1, seed) + noise(x+1, y-1, seed) + noise(x-1, y+1, seed) + noise(x+1, y+1, seed)) / 16
-    const sides = (noise(x-1, y, seed) + noise(x+1, y, seed) + noise(x, y-1, seed) + noise(x, y+1, seed)) / 8
-    const center = noise(x, y, seed) / 4
-    return corners + sides + center
-  }
-
-  const interpolatedNoise = (x: number, y: number, seed: number = 0) => {
-    const intX = Math.floor(x)
-    const fracX = x - intX
-    const intY = Math.floor(y)
-    const fracY = y - intY
-
-    // Smooth interpolation using cosine
-    const smoothX = (1 - Math.cos(fracX * Math.PI)) / 2
-    const smoothY = (1 - Math.cos(fracY * Math.PI)) / 2
-
-    const v1 = smoothNoise(intX, intY, seed)
-    const v2 = smoothNoise(intX + 1, intY, seed)
-    const v3 = smoothNoise(intX, intY + 1, seed)
-    const v4 = smoothNoise(intX + 1, intY + 1, seed)
-
-    const i1 = v1 * (1 - smoothX) + v2 * smoothX
-    const i2 = v3 * (1 - smoothX) + v4 * smoothX
-
-    return i1 * (1 - smoothY) + i2 * smoothY
-  }
-
-  const fractalNoise = (x: number, y: number, octaves: number = 6, seed: number = 0) => {
-    let value = 0
-    let amplitude = 1
-    let frequency = 0.1 // Increased frequency for more visible variation
-    let maxValue = 0
-
-    for (let i = 0; i < octaves; i++) {
-      value += interpolatedNoise(x * frequency, y * frequency, seed + i * 100) * amplitude
-      maxValue += amplitude
-      amplitude *= 0.5
-      frequency *= 2
-    }
-
-    return value / maxValue
-  }
-
-  const circularGradient = (x: number, y: number, radius: number = 16) => {
-    const distance = Math.sqrt(x * x + y * y)
-    return Math.max(0, 1 - (distance / radius))
-  }
-
   // Create the geometry with vertices for the wireframe
   const geometry = useMemo(() => {
-    const geo = new THREE.PlaneGeometry(32, 22, 80, 60)
+    const geo = new THREE.PlaneGeometry(32, 22, 56, 40)
     const vertices = geo.attributes.position.array as Float32Array
 
     // Apply fractal noise with circular gradient control
@@ -85,14 +78,9 @@ function WireframePlane() {
       const gradient = circularGradient(x, y, 68)
       const heightMultiplier = gradient * gradient // Square for smooth falloff
       
-      // Final height with visible organic surface characteristics
       const height = combinedNoise * heightMultiplier * 9.0
-      
-      // Debug: Add a simple test pattern to verify it's working
-      const testPattern = Math.sin(x * 0.4) * Math.cos(y * 0.5) * gradient * 5.0
-      
-      // Use test pattern for now to debug
-      vertices[i + 2] = testPattern
+
+      vertices[i + 2] = height
     }
 
     geo.attributes.position.needsUpdate = true
@@ -165,7 +153,7 @@ export function WireframeGrid() {
           width: '100%',
           height: '100%',
         }}
-        dpr={[1, 2]}
+        dpr={[1, 1.5]}
         performance={{ min: 0.5 }}
       >
         <Scene />

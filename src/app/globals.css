@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 :root {
+  --font-geist-sans: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-geist-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-oswald: "Arial Narrow", "Franklin Gothic Medium", "Segoe UI", sans-serif;
+  --font-space-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
   /* Tech Mono Color Palette - Pure Monochrome */
   --tech-mono-5: 0 0% 5%;          /* #0D0D0D - primary */
   --tech-mono-3: 0 0% 25%;         /* #403F3F - secondary */

@@ -11,7 +11,7 @@ const projects = [
     title: "DeFi Trading Platform",
     description:
       "A comprehensive decentralized exchange with advanced trading features, liquidity pools, and yield farming capabilities.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg",
     tags: ["DeFi", "Smart Contracts", "Web3"],
     challenge:
       "Creating a secure, high-performance decentralized exchange with complex trading features and optimal gas efficiency.",
@@ -24,7 +24,7 @@ const projects = [
     title: "NFT Marketplace",
     description:
       "A feature-rich NFT marketplace supporting multiple blockchains, with advanced minting, trading, and royalty management.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg",
     tags: ["NFT", "Marketplace", "Multi-chain"],
     challenge:
       "Building a scalable NFT marketplace that supports multiple blockchains while ensuring a seamless user experience.",
@@ -37,7 +37,7 @@ const projects = [
     title: "DAO Governance Platform",
     description:
       "A decentralized autonomous organization framework with advanced voting mechanisms, proposal management, and treasury controls.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/placeholder.svg",
     tags: ["DAO", "Governance", "Voting"],
     challenge:
       "Developing a flexible DAO framework that balances decentralization with efficient decision-making processes.",
@@ -69,6 +69,7 @@ export function PortfolioSection() {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <CardHeader>
@@ -108,6 +109,7 @@ export function PortfolioSection() {
                         alt={project.title}
                         fill
                         className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 960px"
                       />
                     </div>
                     <div className="space-y-4">
